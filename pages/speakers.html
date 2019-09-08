@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AVSS 2020</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 
+  <style>
+
+/**/
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+	//background-image : url("papers4.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	//background-repeat: no-repeat;
+    background-attachment: fixed;
+	height:100%;
+	color: #000099 ;//595a5b;
+}
+
+
+#myCarousel {
+    position: absolute;
+	top:0;
+	left:0;
+    min-width: 100%; 
+    height: auto;
+	width:100%;
+	z-index: 1;
+}
+
+.cimage{
+    width: 100%;
+    height: auto;
+  }
+
+
+#myBtn {
+    width: 20px;
+    font-size: 12px;
+    border: none;
+    /*background: #000;*/
+	background:none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+	    border: none;
+
+}
+
+/**/
+.navbar{
+background-color:transparent; //#f2f2f2; 
+border-color:transparent;
+color: #f1f1f1 !important;//#595a5b !important;
+font-weight: bold;
+}
+
+
+.navbar-default .navbar-nav>li>a{
+color: #f1f1f1 !important ; //#595a5b !important;
+font-size:18px;
+font-weight: bold;
+}
+
+.navbar-default .navbar-brand {
+color: #f1f1f1 !important;//#595a5b !important;
+font-weight: bold;
+}
+
+.dropdown-menu{
+background-color:#f1f1f1;
+}
+
+.dropdown-menu > li > a{
+color: #000099 !important;
+}
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:focus, 
+.navbar-default .navbar-nav > .open > a:hover{
+background-color:#f1f1f1;
+color: #000099 !important;
+}
+
+/**/
+
+
+/**/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .example {background: red;}
+	#myVideo { top:0;}
+	.container{
+		padding-top: 24%;
+		    z-index: -1;
+		}
+    .titleBlock {
+ 	margin:0 auto;
+    position: absolute;
+    top: 2%;
+    right: 30%;
+    left:25%;
+    width:50%;
+    color: #f1f1f1;
+    z-index: 1;
+	background:rgba(0,0,0,.5);
+	
+}
+	#title>h1{
+	font-size:26px;
+	color:#f1f1f1 !important;
+	font-weight: bold;
+	}
+
+	#title>p{
+	font-size:14px;
+	color:#f1f1f1 !important;
+
+	}
+	
+	#confName{
+	display:none;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .example {background: green;}
+	#myVideo { top:0;}
+	.container{
+		padding-top: 17%;
+		    z-index: -1;
+		}
+    .titleBlock {
+ 	margin:0 auto;
+    position: absolute;
+    top: 2%;
+    right: 30%;
+    left:25%;
+    width:50%;
+    color: #f1f1f1;
+    z-index: 1;	
+	background:rgba(0,0,0,.5);
+	
+}
+	#title>h1{
+	font-size:30px;
+	color:#f1f1f1 !important;
+	font-weight: bold;
+	}
+
+	#title>p{
+	font-size:16px;
+	color:#f1f1f1 !important;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .example {background: blue;}
+	#myVideo { top:0;}
+	.container{
+		padding-top: 17%;
+		    z-index: -1;
+		}
+    .titleBlock {
+ 	margin:0 auto;
+    position: absolute;
+    top: 7%;
+    right: 30%;
+    left:25%;
+    width:50%;
+    color: #f1f1f1;
+    z-index: 1;	
+	background:rgba(0,0,0,.5);
+	
+}
+	#title>h1{
+	font-size:44px;
+	color:#f1f1f1 !important;
+	font-weight: bold;
+	}
+
+	#title>p{
+	font-size:18px;
+	color:#f1f1f1 !important;
+	}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .example {background: orange;}
+	#myVideo { top:0;}
+	.container{
+		padding-top: 17%;
+		z-index: -1;
+		}
+    .titleBlock {
+ 	margin:0 auto;
+    position: absolute;
+    top: 7%;
+    right: 30%;
+    left:25%;
+    width:50%;
+    color: #f1f1f1;
+    z-index: 1;
+	background:rgba(0,0,0,.5);
+	
+}
+
+	#title>h1{
+	font-size:48px;
+	color:#f1f1f1 !important;
+	font-weight: bold;
+	}
+
+	#title>p{
+	font-size:22px;
+	color:#f1f1f1 !important;
+	}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .example {background: pink;}
+	#myVideo { top:0;}
+    .container{
+		padding-top: 16%;
+		    z-index: -1;
+		}
+    .titleBlock {
+ 	margin:0 auto;
+    position: absolute;
+    top: 9%;
+    right: 30%;
+    left:25%;
+    width:50%;
+    color: #f1f1f1;
+    z-index: 1;
+	background:rgba(0,0,0,.35);
+	
+}
+	#title>h1{
+	font-size:48px;
+	color:#f1f1f1 !important;
+	font-weight: bold;
+	}
+
+	#title>p{
+	font-size:22px;
+	color:#f1f1f1 !important;
+	}
+}
+
+
+#intro-bg{
+//background-color: #d9d9d9;
+//background-color: #f2f2f2;
+//opacity: 0.8;
+color:#000099 ; //#595a5b;
+text-align:justify;
+
+}
+
+
+	.panel-transparent {
+			background: none;
+		}
+
+	.panel-transparent .panel-header{
+	    z-index: -1;
+        background: none !important;
+		padding-top: 10px;
+		padding-bottoms: 10px;
+
+    }
+	
+    .panel-transparent .panel-body{
+	    z-index: -1;
+        background: none !important;
+		padding-top: 10px;
+		
+    }
+
+
+	.panel-default {
+		border: none;
+		z-index: -1;
+	}
+
+.panel-header{
+padding-bottom:0px;
+padding-top:0px;
+}
+
+.panel-body{
+padding-bottom:0px;
+padding-top:0px;
+}
+
+.panel{
+	border-width:0;
+    box-shadow:none;
+}
+
+.well{
+background-color: transparent;
+border:none;
+padding-top:0px;
+padding-bottom:0px;
+border-width:0;
+box-shadow:none;
+}
+
+
+/**/
+h4{
+font-weight: bold;
+color:#000099;
+
+}
+
+
+#news
+{
+text-align:left;
+background-color: transparent; //#f2f2f2;
+opacity: 0.8;
+}
+
+
+
+#news li>h5{
+font-weight: bold;
+}
+
+#regOptions{
+text-align: left;
+width: 100%;
+background-color: #f2f2f2;
+opacity: 0.8;
+}
+
+#regOptions td:hover{
+background-color: red;
+}
+
+/*
+#regOptions tr:nth-child(odd){
+background-color: #f2f2f2;
+opacity: 0.8;
+}
+
+#regOptions tr:nth-child(even){
+background-color: #f2f2f2;
+opacity: 0.8;
+}
+*/
+
+#regOptions td, #regOptions th {
+    border: 1px solid #d9d9d9;
+    padding: 8px;
+}
+
+
+
+#heading{
+font-weight: bold;
+text-align: center;
+color:#000099;//#595a5b;
+text-decoration: underline;
+}
+
+#divOrg{
+border: none;
+background-color: transparent;
+}
+
+/**/
+a {
+
+    color: rgb(153, 0, 0);
+
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="container text-center">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="../index.html"><img src="../images/logo_white_small.png" alt="logo" width="100" height="60"> </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      
+          <ul class="nav navbar-nav navbar-right">
+			<li><a href="../index.html">Home</a></li>
+			<li><a href="org.html">Organizers</a></li>
+			<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Submissions
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="impDates.html">Important Dates</a></li>
+          <li><a href="callForPaper.html">Call for Papers</a></li>
+          <li><a href="callForTutorials.html">Call for Tutorials</a></li>
+          <li><a href="callForCompetitions.html">Competitions</a></li>
+          <li><a href="callForSpecialSessions.html">Special Sessions</a></li>
+          <li><a href="paperSub.html">Paper Submission</a></li>
+          <li><a href="cameraready.html">Camera Ready Submission</a></li>
+        </ul>
+      </li>
+      	  <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Program
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="#">Keynote Speakers</a></li>
+          <li><a href="tutorial.html">Tutorials</a></li>
+        </ul>
+      </li>
+	  <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attend
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="venue.html">Venue</a></li>
+          <li><a href="accomodation.html">Accomodation</a></li>
+          <li><a href="visainvite.html">Visa Invitation Letter</a></li>
+        </ul>
+      </li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+				<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators" style="display:none;">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+					<div class="carousel-inner">
+						<div class="item active">
+							<img class="cimage" src="../images/c_1.jpg">
+						</div>
+
+						<div class="item">
+							<img class="cimage" src="../images/c_2.jpgjpg">
+						</div>
+
+						<div class="item">
+							<img class="cimage" src="../images/c_3.jpg">
+						</div>
+						<div class="item">
+							<img class="cimage" src="../images/c_5.jpg">
+						</div>
+					</div>
+
+				  <!-- Left and right controls -->
+				  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" style="display:none;"></span>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" style="display:none;"></span>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>	
+
+				<div class="titleBlock text-center" id="title">
+						<h1>AVSS 2020</h1>
+						<p id="confName">The 17 <sup>th</sup>IEEE Int'l Conf on Advanced Video and Signal-based Surveillance</p>
+						<p>22-25 September | Washington DC, USA</p>
+						<!--<button id="myBtn" onclick="myFunction()"><span class="glyphicon glyphicon-pause"></span></button>-->
+				</div>								
+
+<div class="container" id="main-container">
+<div class="well" >
+<div class="panel panel-transparent  w3-container w3-center w3-animate-bottom">
+	<h4 id="title1">To be updated... </h4>
+		<!--
+	    <div class="panel-header">
+		   <h4 id="title1">Keynote Speakers</h4>
+		</div>
+  
+	    <div class="panel-body">
+			<h5><b><u>Forensic biometrics: beyond the source level inference</u> </b></h5>
+
+			<div class="row" >
+				<div class="col-sm-12">
+							<img  class="img-rounded" src="../images/MeuwlyD.jpg" alt="Prof. Dr. D Meuwly" height="250" width="230">
+							<div class="caption">
+								<h6><a href="https://scs.ewi.utwente.nl/staff/MeuwlyD/" target="_blank"> Prof. Dr. Didier Meuwly</a></h6>
+							    <p>Principal Scientist - Netherlands Forensic Institute </br> Forensic Biometrics chair - University of Twente</p>
+							</div>
+						</a>
+				</div>
+				<div class="col-sm-12">
+					<h5><b>Abstract </b></h5>
+					<p align="justify"> Forensic biometrics is defined as the application of human-based and computer-assisted biometric recognition methods and technologies to analyse biometric traces and reference specimens. Forensic biometrics has primarily been developed to address requests of the criminal justice about the source level inference.
+					Questions about the source of biometric traces are relevant in several forensic scenarios: identity verification, closed and open-set identification, intelligence, investigation and evaluation of evidence in court:
+					</p>
+					
+					<ul id="List1" style="text-align:left;">
+												
+							<li>
+								Forensic biometrics is used for the verification of identity or identification of suspected persons, or for the (closed-set or open-set) identification of victims in the context of disaster victim identification (DVI), for example using DNA material, fingerprints or dental records.
+								
+							</li>
+							<li>
+								 Forensic intelligence consists in linking criminal cases together, for example using DNA traces or fingermarks.
+								
+							</li>
+							<li>
+								 Forensic investigation consists of selecting shortlists of candidates as potential sources of biometric traces, for example using face images.
+								
+							</li>
+							<li>
+								 Forensic evaluation focuses on the description of the strength of the evidence that an individual is the source of a trace, for example using body height measurements (feature-based approach) or speech recordings (score-based approach).
+								
+							</li>
+						 </ul>
+
+					<p align="justify"> But the use of forensic biometrics can also be extended to the examination of traces captured in less traditional conditions, such as conflict zones, and to answer other relevant questions, beyond the question of the source. These questions focus on the examination of the authenticity and integrity of the trace material and on the characterisation of people and their activities, generally on big amounts of data:
+					</p>
+
+					<ul id="List1" style="text-align:left;">
+												
+							<li>
+								The characterisation of people includes questions for example about their number, their age, their gender, their health condition (healthy, deprived, injured, living, dead).
+								
+							</li>
+							<li>
+								 The characterisation of their activities includes questions about what they do, how, where and when.
+							</li>
+							
+						 </ul>
+
+					<p align="justify"> This new type of requests opens new challenges for the research and development in forensic biometrics, in terms of relevant datasets, biometric technology and forensic inference.
+					</p>
+
+					
+					<h5><b>Biography</b></h5>
+					<p align="justify"> Didier Meuwly is born in Fribourg, Switzerland. After a classical education (Latin / Philosophy), he graduated as a criminalist and criminologist (1993) and received his PhD (2000), both at the School of Forensic Science (Ecole de Sciences Criminelles) of the University of Lausanne. He currently shares his time between The Netherlands Forensic Institute (NFI), an agency of the Dutch Ministry of Justice and Security, where he is the principal scientist, and the University of Twente, where he holds the chair of Forensic Biometrics. He specialises in the automation and validation of the probabilistic evaluation of forensic evidence, and more specifically from biometric traces.
+He was previously responsible for the fingerprint section within the NFI and the leader of a project about the probabilistic evaluation of fingerprint evidence. From 2002 to 2004 Didier worked as a senior forensic scientist at the R&D department of the Forensic Science Service (UK-FSS), then an executive agency of the British Ministry of the Interior.
+Didier serves as an associate editor for Forensic Science International (FSI) and is a member of the R&D standing committee of the European Network of Forensic Science Institutes (ENFSI-RDSC). He is also the lead editor of an ISO standard in the field of forensic science (21043-3).</p>
+				</div>
+			</div>	
+        </div>
+    </div>
+</br>
+        <div class="panel-body">
+        	<h5><b><u>IAPR 2019 Biometrics Lecture:  Eye Movement Detection Sensors, Biometrics, and Health Assessment</u></b></h5>
+
+			<div class="row" >
+				<div class="col-sm-12">
+							<img  class="img-rounded" src="../images/Oleg_Photo_1.jpg" alt="Prof. Oleg Komogortsev" height="250" width="230">
+							<div class="caption">
+								<h6><a href="https://userweb.cs.txstate.edu/~ok11/" target="_blank"> Prof. Oleg Komogortsev</a></h6>
+							    <p>Associate Professor </br> Texas State University</p>
+							</div>
+						</a>
+				</div>
+				<div class="col-sm-12">
+					<h5><b>Abstract </b></h5>
+					<p align="justify"> The availability of eye movement detection sensors is set to explode, with billions of units available in future Virtual Reality (VR) and Augmented Reality (AR) platforms. In my talk I will discuss the past, present, and future of such sensors and their applications. I will discuss both the applications that initially necessitate the presence of such sensors in VR/AR devices, along with additional uses that would be enabled by those sensors such as eye movement driven biometrics and health assessment.</p>
+					
+
+					<h5><b>Biography</b></h5>
+					<p align="justify"> Dr. Komogortsev is currently a tenured Associate Professor at Texas State University and a Visiting Scientist at Facebook Reality Labs at Facebook. Dr. Komogortsev has received his B.S. in Applied Mathematics from Volgograd State University, Russia, and M.S./Ph.D. degree in Computer Science from Kent State University, Ohio. He has previously worked for such institutions as Johns Hopkins University, Notre Dame University, and Michigan State University. Dr. Komogortsev conducts research in eye tracking with a focus on cyber security (biometrics), health assessment, human computer interaction, usability, and bioengineering. This work has thus far yielded more than 100 peer reviewed publications and several patents. Dr. Komogortsev’s research was covered by the national media including NBC News, Discovery, Yahoo, Livesience and others. Dr. Komogortsev is a recipient of four Google awards including two Virtual Reality Research Awards (2016, 2017), Google Faculty Research Award (2014), and Google Global Faculty Research Award (2018). Dr. Komogortsev has also won National Science Foundation CAREER award and Presidential Early Career Award for Scientists and Engineers (PECASE) from President Barack Obama on the topic of cybersecurity with the emphasis on eye movement-driven biometrics and health assessment. In addition, his research is supported by the National Science Foundation, National Institute of Health, National Institute of Standards, Sigma Xi the Scientific Research Society, and various industrial sources. Dr. Komogortsev’s current grand vision is to push forward eye tracking solutions in the future virtual and augmented reality platforms as enablers of more immersive experiences, security, and assessment of human state.</p>
+				</div>
+			</div>	
+        </div>
+</br>
+        <div class="panel-body">
+        	<h5><b><u>Face Recognition - Research and Recent Advances</u></b></h5>
+
+			<div class="row" >
+				<div class="col-sm-12">
+							<img  class="img-rounded" src="../images/img22.jpg" alt="Prof. Oleg Komogortsev" height="250" width="230">
+							<div class="caption">
+								<h6><a href="http://www.cbsr.ia.ac.cn/users/zlei/" target="_blank"> Prof. Zhen Lei</a></h6>
+							    <p>Professor </br> National Laboratory of Pattern Recognition, CASIA</p>
+							</div>
+						</a>
+				</div>
+				<div class="col-sm-12">
+					<h5><b>Abstract </b></h5>
+					<p align="justify"> Face recognition has achieved great success and has been deployed in many applications in recent years. In this talk, he’ll first share his experience in face recognition research, along with the introduction of some face recognition applications. Then, some recent progress, especially deep learning methods in face recognition, including face detection, face alignment, face recognition and face anti-spoofing will be introduced. Finally, he will give a personal look into the future of face recognition.</p>
+					
+
+					<h5><b>Biography</b></h5>
+					<p align="justify"> Zhen Lei is a professor at the Center for Biometrics and Security Research (CBSR) & National Laboratory of Pattern Recognition (NLPR), Institute of Automation, Chinese Academy of Sciences. His research interest includes face recognition and video analytics. He has published over 130 papers in international journals and conferences. He holds 11 invention patents and has drawn up 7 standards of public security. He received the Best Student Paper in ICB2006, 2014 and 2015, the Best Paper in ICB2007, the Best Student Paper Honorable Mention in FG2013, the Best Student Paper Honorable Mention in ICME2018. He won the competition of facial micro-expression recognition in FG2017, won the 300-w face landmark localization held in ICCV2013, and won the face liveness detection in ICB2011 and 2013.</p>
+				</div>
+			</div>	
+        </div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</body>
+</html>
